@@ -1,0 +1,17 @@
+# exercise 1
+# #Accept a number from the user and print its multiplication table
+number =input("put in a number: ")
+user_num =int(number)
+print(user_num)
+for user in range(1, 12) : print (user * user_num)   
+
+#exercise 2
+#Print the numbers from 1 to 10 using while loop
+
+r_num = 1 
+while r_num <=10 : 
+    print(r_num) 
+    r_num += 1
+
+
+
