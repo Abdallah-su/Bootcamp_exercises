@@ -1,0 +1,178 @@
+Python 3.14.1 (tags/v3.14.1:57e0d17, Dec  2 2025, 14:05:07) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> info =[("name","country","job" ), ("Abdallah","Ghana","student")]
+>>> print(info)
+[('name', 'country', 'job'), ('Abdallah', 'Ghana', 'student')]
+>>> user.info =dict(info)
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    user.info =dict(info)
+               ~~~~^^^^^^
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+>>> info =[("name","Abdallah"),("country","Ghana" ), ("job","student")]
+>>> infor = dict(info)
+>>> print(infor)
+{'name': 'Abdallah', 'country': 'Ghana', 'job': 'student'}
+>>> short=["CA","NY","HI"]
+>>> full=["califonia", "new york", "rhode island"]
+>>> match= dict(zip(short, full))
+>>> print(match)
+>>> first= "hello world"
+>>> #this is a comment
+>>> print("I AM A COMPUTER")
+I AM A COMPUTER
+>>> if 1< 2 and 4>2 :
+...  print("maths is fun")
+...
+maths is fun
+>>> nope= []
+>>> print(nope)
+[]
+>>> nope= None
+>>> print(nope)
+None
+>>> statement= true and false
+Traceback (most recent call last):
+  File "<python-input-30>", line 1, in <module>
+    statement= true and false
+               ^^^^
+NameError: name 'true' is not defined. Did you mean: 'True'?
+>>> statement= true and false : print(statement)
+  File "<python-input-31>", line 1
+    statement= true and false : print(statement)
+                              ^
+SyntaxError: invalid syntax
+>>> statement= True and False : print(statement)
+  File "<python-input-32>", line 1
+    statement= True and False : print(statement)
+                              ^
+SyntaxError: invalid syntax
+>>> statement= True and False
+>>> print(statement)
+False
+>>>
+>>> string = "what's my lenghth?"
+>>> string_len= len(string)
+>>> print(string_len)
+18
+>>>
+>>> string1="i am shouting"
+>>> string1.upper()
+'I AM SHOUTING'
+>>>
+>>> string2= "1000"
+>>> value = int(string2)
+>>> print(value)
+1000
+>>>
+>>> x, b :4, "real"
+  File "<python-input-47>", line 1
+    x, b :4, "real"
+    ^
+SyntaxError: only single target (not tuple) can be annotated
+>>> a= 4, b= "real"
+  File "<python-input-48>", line 1
+    a= 4, b= "real"
+    ^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+>>> a== 4, b== "real"
+Traceback (most recent call last):
+  File "<python-input-49>", line 1, in <module>
+    a== 4, b== "real"
+    ^
+NameError: name 'a' is not defined
+>>> "4" + "real"
+'4real'
+>>>
+>>> 3 * "cool"
+'coolcoolcool'
+>>>
+>>> 1/0
+Traceback (most recent call last):
+  File "<python-input-54>", line 1, in <module>
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
+>>>
+>>> kind_list = type([])
+>>> print(kind_list)
+<class 'list'>
+>>> name= input( 'whats your name?")
+  File "<python-input-58>", line 1
+    name= input( 'whats your name?")
+                 ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> name= int(input(whats your name?))
+  File "<python-input-59>", line 1
+    name= int(input(whats your name?))
+                    ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> name= int(input("whats your name?"))
+whats your name?
+Traceback (most recent call last):
+  File "<python-input-60>", line 1, in <module>
+    name= int(input("whats your name?"))
+ValueError: invalid literal for int() with base 10: ''
+>>> name= int(input("whats your name?"))
+whats your name?
+Traceback (most recent call last):
+  File "<python-input-61>", line 1, in <module>
+    name= int(input("whats your name?"))
+enter a number, if user.input < 0: print("that number is less than \
+Traceback (most recent call last):
+  File "<python-input-62>", line 1, in <module>
+    user.input = int(input("enter a number"))
+                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ', if user.input < 0: print("that number is less than  '
+>>> , if user.input < 0: print("that number is less than 0)
+  File "<python-input-63>", line 1
+    , if user.input < 0: print("that number is less than 0)
+                               ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>>   user.input = int(input("enter a number"))
+  File "<python-input-64>", line 1
+    user.input = int(input("enter a number"))
+IndentationError: unexpected indent
+>>> number = int(input("kindly enter a value :")
+... if value< 0: print("the value is less than zero")
+... elif value> 0: print("the value is greater zero")
+... else : print( "value is zero")
+...
+  File "<python-input-65>", line 1
+    number = int(input("kindly enter a value :")
+                ^
+SyntaxError: '(' was never closed
+>>> f= "apple"
+>>> li="apple".find("l")
+>>> print(li)
+3
+>>> lii="apple".index("l")
+>>> print(lii)
+3
+>>>
+>>> z= y in "xylophone"
+Traceback (most recent call last):
+  File "<python-input-72>", line 1, in <module>
+    z= y in "xylophone"
+       ^
+NameError: name 'y' is not defined
+>>> z= "y" in "xylophone"
+>>> print(z)
+True
+>>>
+>>> string4 =my_string
+Traceback (most recent call last):
+  File "<python-input-76>", line 1, in <module>
+    string4 =my_string
+             ^^^^^^^^^
+NameError: name 'my_string' is not defined. Did you mean: 'string'?
+>>> string4 ="my_string"
+>>> it_is
+Traceback (most recent call last):
+  File "<python-input-78>", line 1, in <module>
+    it_is
+NameError: name 'it_is' is not defined
+>>> it_is = string4.islower()
+>>> print(it_is)
+True
+>>>

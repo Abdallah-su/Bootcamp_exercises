@@ -1,0 +1,106 @@
+Python 3.14.1 (tags/v3.14.1:57e0d17, Dec  2 2025, 14:05:07) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x=[1, 2, 3, 4]
+>>> print(x[0])
+1
+>>> print(x[1])
+2
+>>> print(x[2])
+3
+>>> print(x[3])
+4
+>>> print(x**20)
+Traceback (most recent call last):
+  File "<python-input-5>", line 1, in <module>
+    print(x**20)
+          ~^^~~
+TypeError: unsupported operand type(s) for ** or pow(): 'list' and 'int'
+>>> y= x ** 20
+Traceback (most recent call last):
+  File "<python-input-6>", line 1, in <module>
+    y= x ** 20
+       ~~^^~~~
+TypeError: unsupported operand type(s) for ** or pow(): 'list' and 'int'
+>>> print(x*20)
+[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3,4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+>>> list_2 =['Elie','Tim', 'matt']
+>>> initials =[name[0] for name in initials]
+Traceback (most recent call last):
+  File "<python-input-9>", line 1, in <module>
+    initials =[name[0] for name in initials]
+                                   ^^^^^^^^
+NameError: name 'initials' is not defined
+>>> initials =[name[0] for name in list_2]
+>>>
+>>> print(initials)
+['E', 'T', 'm']
+>>> A=[1,2,3,4,5,6]
+>>> even=[for value in A if value %2==0]
+  File "<python-input-14>", line 1
+    even=[for value in A if value %2==0]
+          ^^^
+SyntaxError: invalid syntax
+>>> even=[value for value in A if value %2==0]
+>>> print(even)
+[2, 4, 6]
+>>> z=[3,4,5,6]
+>>> common=[c for c in x if c in z]
+>>> print(common)
+[3, 4]
+>>> rl=[name [::-1].lower() for name in list_2]
+>>> print(rl)
+['eile', 'mit', 'ttam']
+>>> str_1= "first"
+>>> str_2= "third"
+>>> cm= [l for l in str_1 if l in str_2]
+>>> print(cm)
+['i', 'r', 't']
+>>> for num in range(1,100)
+  File "<python-input-26>", line 1
+    for num in range(1,100)
+                           ^
+SyntaxError: expected ':'
+>>> number= range(1,100)
+>>> d12=[val for val in number if number %12==0]
+Traceback (most recent call last):
+  File "<python-input-28>", line 1, in <module>
+    d12=[val for val in number if number %12==0]
+                                  ~~~~~~~^~~
+TypeError: unsupported operand type(s) for %: 'range' and 'int'
+>>> d12=[val for val in number if val %12==0]
+>>> print(d12)
+[12, 24, 36, 48, 60, 72, 84, 96]
+>>> str_3="amazing"
+>>> c_only=[rmv for rmv in str_3 if rmv is not v]
+Traceback (most recent call last):
+  File "<python-input-32>", line 1, in <module>
+    c_only=[rmv for rmv in str_3 if rmv is not v]
+                                               ^
+NameError: name 'v' is not defined
+>>> v="ieoua"
+>>> c_only=[rmv for rmv in str_3 if rmv is not v]
+>>> print(c_only)
+['a', 'm', 'a', 'z', 'i', 'n', 'g']
+>>> c_only=[rmv for rmv in str_3 if rmv is not in v]
+  File "<python-input-36>", line 1
+    c_only=[rmv for rmv in str_3 if rmv is not in v]
+                                               ^^
+SyntaxError: invalid syntax
+>>> c_only=[rmv for rmv in str_3 if rmv not in v]
+>>> print(c_only)
+['m', 'z', 'n', 'g']
+>>> il=[1,2,3]
+>>> rl=[il for ]
+  File "<python-input-40>", line 1
+    rl=[il for ]
+               ^
+SyntaxError: invalid syntax
+>>> rl=[il for _ in range(3)]
+>>> print(rl)
+[[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+>>> st=[1,2,3,4,5,6,7,8,9]
+>>> st=[0,1,2,3,4,5,6,7,8,9]
+>>> ge=[st for _ in range(10)]
+>>> print(ge)
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 6, 7, 8,9], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]
+>>>

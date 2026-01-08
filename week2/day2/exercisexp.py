@@ -107,3 +107,4 @@ temp_ =random.randint(10, 40)
 print(temp_cond(temp_)) 
  
      
+

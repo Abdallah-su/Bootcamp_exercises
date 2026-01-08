@@ -20,8 +20,6 @@ if user_number % 5 == 0 : print("Buzz")
 if user_number % 3 ==  0 and user_number % 5 == 0 : print("FizzBuzz")
 
 
-git Init
-git init
 
 
 

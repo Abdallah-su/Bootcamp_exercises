@@ -1,0 +1,49 @@
+Python 3.14.1 (tags/v3.14.1:57e0d17, Dec  2 2025, 14:05:07) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> info =[("name","country","job" ), ("Abdallah","Ghana","student")]
+>>> print(info)
+[('name', 'country', 'job'), ('Abdallah', 'Ghana', 'student')]
+>>> user.info =dict(info)
+Traceback (most recent call last):
+  File "<python-input-2>", line 1, in <module>
+    user.info =dict(info)
+               ~~~~^^^^^^
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+>>> info =[("name","Abdallah"),("country","Ghana" ), ("job","student")]
+>>> infor = dict(info)
+>>> print(infor)
+{'name': 'Abdallah', 'country': 'Ghana', 'job': 'student'}
+>>> short=["CA","NY","HI"]
+>>> full=["califonia", "new york", "rhode island"]
+>>> match= dict(zip(short, full))
+>>> print(match)
+{'CA': 'califonia', 'NY': 'new york', 'HI': 'rhode island'}
+>>>
+>>> vowels=["e", "e", "i", "o", "u"]
+>>> values=[0,0,0,0,0]
+>>> match_2=dict(zip(vowels, values))
+>>> print(match_2)
+{'e': 0, 'i': 0, 'o': 0, 'u': 0}
+>>> alpha =str.ascii_uppercase
+Traceback (most recent call last):
+  File "<python-input-15>", line 1, in <module>
+    alpha =str.ascii_uppercase
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'str' has no attribute 'ascii_uppercase'
+>>> alpha =string.ascii_uppercase
+Traceback (most recent call last):
+  File "<python-input-16>", line 1, in <module>
+    alpha =string.ascii_uppercase
+           ^^^^^^
+NameError: name 'string' is not defined. Did you forget to import 'string'?
+>>> import string
+>>> alpha =string.ascii_uppercase
+>>> alphaval=[str(l + 1):letter for l, letter in enumerate( string.ascii_uppercase)]
+  File "<python-input-19>", line 1
+    alphaval=[str(l + 1):letter for l, letter in enumerate( string.ascii_uppercase)]
+                        ^
+SyntaxError: invalid syntax
+>>> alphaval={str(l + 1):letter for l, letter in enumerate( string.ascii_uppercase)}
+>>> print(alphaval)
+{'1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E', '6': 'F', '7': 'G', '8': 'H', '9': 'I', '10': 'J', '11': 'K', '12': 'L', '13': 'M', '14': 'N', '15': 'O', '16': 'P', '17': 'Q', '18': 'R', '19': 'S', '20': 'T', '21': 'U', '22': 'V', '23': 'W', '24': 'X', '25': 'Y', '26': 'Z'}
+>>>

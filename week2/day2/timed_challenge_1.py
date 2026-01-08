@@ -1,0 +1,17 @@
+#Count occurence
+#Write a program which takes a string and a character as an input, and finds out the number of occurrences the character has in the string.
+
+#String: Programming is cool!
+#Character: o
+#3
+
+string_1 ="programming is cool"
+print(string_1.count('o'))
+
+
+#String: "This is a great example"
+#Character: y
+#0
+
+string_2 ="This is a great example"
+print(string_2.count('y'))

@@ -4,5 +4,5 @@
 people = ["Rick", "Morty", "Beth", "Jerry", "Snowball"]
 
 chosen =filter(lambda name : len(name)<= 4, people)
-greetings =map(lambda name :f"hello {name}", chosen)
+greetings =map(lambda name :f"hello {name}", chosen)g
 print (list(greetings))
