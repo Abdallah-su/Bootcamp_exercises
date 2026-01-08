@@ -1,0 +1,10 @@
+URL: https://github.com/Abdallah-su/Bootcamp_exercises/blob/main/week2/day4/project_tic-tac_toe.py
+suggestions for improvement:
+- The code could benefit from a more descriptive variable name for `game_on`.  Something like `is_game_active` might be slightly clearer.
+- Consider adding input validation to prevent non-integer input for the coordinates. This is handled, but a more specific message might be useful.
+Brief justification:
+- correctness: The code accurately implements the Tic Tac Toe game according to the instructions provided. It includes functions for displaying the board, handling player input, checking for a win, and managing the main game loop. It correctly utilizes conditionals and loops as taught in the chapter, and the functions follow the single responsibility principle. The solution is complete and functional.
+- readability: The code is well-structured and easy to follow, with clear function definitions and comments explaining the purpose of each section. The variable names are generally descriptive. The use of f-strings enhances readability.
+- performance: The code's performance is efficient for the given task. The game logic is straightforward, and the functions execute quickly. There are no unnecessary computations or loops.
+- security: The code is reasonably secure, with basic input validation to prevent errors caused by invalid input types or out-of-range coordinates. However, there's no explicit handling of malicious input, but for this simple game, the risk is minimal.
+
