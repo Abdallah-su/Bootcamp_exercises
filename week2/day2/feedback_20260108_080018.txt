@@ -1,0 +1,15 @@
+URL: https://github.com/Abdallah-su/Bootcamp_exercises/blob/main/week2/day2/exercisexp.py
+suggestions for improvement:
+- Exercise 1: The function `display_message` should not take a parameter according to the prompt. It should always return 'I am learning about functions in Python.' The code provides a parameter.
+- Exercise 2: Function name `fav_book` could be more descriptive like `favorite_book`.
+- Exercise 3: The function name should be `describe_city` and the parameters should be `city` and `country` with a default value for country.
+- Exercise 4: The function should accept a parameter and compare it with a random number. Currently the function is generating random numbers but not comparing the two.
+- Exercise 5: The function should take two parameters, `size` and `text` with default values. The code only takes one parameter.
+- Exercise 6: The code uses list modification methods, loops and functions. However, it doesn't fully address the prompt requirements of creating a function called `show_magicians()` that takes the magician_names list as a parameter. Inside the function, iterate through the list and print each magician's name and to create a function called `make_great()` that takes the `magician_names` list as a parameter and Inside the function, use a for loop to iterate through the list and add "the Great" before each magician's name.
+- Exercise 7: The code generates a random temperature and provides some advice. The output should  “The temperature right now is 32 degrees Celsius.”
+Brief justification:
+- correctness: The code addresses several exercises, but it contains errors or doesn't fully implement the requirements in most of them. Some of the function names don't match what the prompt is asking for. Some function are taking parameters when they shouldn't and vice versa. The parameters are not in alignment with the description of the exercises. Therefore, the correctness is low.
+- readability: The code is relatively easy to follow. However, some function names could be more descriptive to improve clarity.
+- performance: The performance is generally good, as the code executes quickly. However, some exercises could be optimized for better efficiency.
+- security: There are no apparent security issues.
+
