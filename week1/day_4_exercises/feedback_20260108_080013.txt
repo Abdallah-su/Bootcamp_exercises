@@ -1,0 +1,13 @@
+URL: https://github.com/Abdallah-su/Bootcamp_exercises/blob/main/week1/day_4_exercises/exercise_xp.py
+suggestions for improvement:
+- The code for exercise 2 is commented out. Uncomment and provide the code that demonstrates the immutability of tuples, or a written explanation as requested in the instructions.
+- In exercise 4, you did not provide the code to generate the sequence using loops as requested in the instructions.
+- In Exercise 8, there's a logical error in calculating the total cost. `len(user_topping)` should be `len(topping)` since you want to count the number of toppings added, not the length of the last topping entered.
+- In Exercise 8, the condition `if user_topping.lower == "quit"` should be `if user_topping.lower() == "quit"`.
+- In exercise 9, the cost calculation logic is incorrect, the number of people and thier ages is not calculated properly , the code is unfinished.
+Brief justification:
+- correctness: The code correctly implements most of the exercises but has some issues with calculating total cost in exercise 8, exercise 2 and 4 is missed, in exercise 9 the cost calculation logic is incorrect, therefore, correctness is 72%.
+- readability: The code is reasonably readable with proper comments, but could be improved by separating the code into functions for each exercise. Also, the code for all exercises are in one block which decreases the readability.
+- performance: The performance is generally fine for the scale of these exercises.
+- security: The code is relatively secure, although it could benefit from input validation to prevent errors or malicious input.
+
