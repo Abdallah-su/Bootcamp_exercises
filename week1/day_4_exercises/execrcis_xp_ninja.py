@@ -16,7 +16,7 @@ result = [ ]
 user_list = input("type in a list of numbers seperated by ',':  ")
 for D_str in user_list.split(","):
     D = int(D_str)
-    Q = int((2*C*D)/H)**0.5
+    Q = ((2*C*D)/H)**0.5
     result.append(str(Q))
 print(",".join(result))
 
@@ -84,4 +84,7 @@ print(sorted_list[-1])
 #Bonus: How many non-whitespace characters it contains.
 #Bonus: The average amount of words per sentence in the paragraph.
 #Bonus: the amount of non-unique words in the paragraph.
-
+my_paragragh ='PostgreSQL is an advanced, enterprise-class, and open-source relational database system. PostgreSQL supports both SQL (relational) and JSON (non-relational) querying'
+words= my_paragragh.split()
+statement = f"the paragragh contains {len(my_paragragh)} and {len(words)} words and {my_paragragh.count('.')} sentence"
+print(statement)

@@ -6,14 +6,14 @@ class Currency:
 
     def __str__(self):
         for currency1, currency2 in self.currency:
-            if currency1 != currency2:
-                raise Exception("maths error")
-            else: continue
+            if currency1 == currency2:
+                continue
+            else: raise Exception("maths error")
+            
 
-    def __add__(self, a, b):
-        self.__add__()
-        for a, b in self.amount:
-          return a + b
+    def __add__(self,  b):
+        return self.amount + b
+    
     
     
 c1 = Currency('dollar', 5)

@@ -1,4 +1,4 @@
-from anagram_checker import AnagramChecker
+from week4.day1.angram.anagram_checker import AnagramChecker
 user_character = AnagramChecker()
 while True:
     user_input= input("""        Welcome to Anagram Game!
