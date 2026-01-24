@@ -17,21 +17,21 @@ class MenuItem:
         self.item = item
 
     def save (self):
-        query = "insert into MenuItem(item_name, item_price) values (%s, %s);"
+        query = "insert into menu_item(item_name, item_price) values (%s, %s);"
         cursor.execute(query,(self.item, self.price))
         connection.commit()
         print(f"Your order for {self.item} is saving, a momment please!")
         return True
     
     def delete(self):
-        query = "delete from MenuItem where self.item = %s"
+        query = "delete from menu_item where item_name = %s"
         cursor.execute(query, (self.item,) ) 
         connection.commit()
         print("your order for {self.item} is being deleted")
         return self.item
    
     def update(self, other_item,  other_price):
-        query = "update MenuItem set self.item = %s, self.price = %s"
+        query = "update menu_item set item_name = %s, item_price = %s"
         cursor.execute(query,(self.item, other_item, other_price)) 
         connection.commit()
         

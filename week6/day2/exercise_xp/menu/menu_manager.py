@@ -5,17 +5,35 @@
 # if an object is not found (there is no item matching
 #  the name in the get_by_name method) return None.
 
+import psycopg2
+connection = psycopg2.connect(
+user = 'postgres',
+password = 'Abs0240574227',
+host = 'localhost',
+port = '5432',
+database = 'menu'
+)
+
+cursor = connection.cursor()
+
 class MenuManager:
     @classmethod
     def all(cls):
-        return [ ]
+        query ="select item_name, item_price from menu_item"
+        cursor.execute(query)
+        connection.commit()
+        menu = cursor.fetchall()
+        return menu
+        
+
+        
         
     @classmethod
-    def get_by_name(cls, item):
-        item_list = all(cls)
-        for object in item_list:
-            if object == item :
-                return object
-        return None
+    def get_by_name(cls, item_name):
+        query = "select item_name, item_price from menu_item where item_name = %s"
+        cursor.execute(query, (item_name,))
+        connection.commit()
+        dish = cursor.fetchone()
+        return dish
    
     
