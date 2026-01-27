@@ -55,6 +55,7 @@ def show_user_menu():
      else:print(" invalid input! try again")
 
 def add_item_to_menu():
+    global item_to_add
     user_add = input ('select what to add: ').title()
     user_price= input('select the price associated with the item added: ')
     item_to_add = MenuItem(user_add, user_price)
@@ -80,10 +81,8 @@ def update_item_from_menu():
 
 def show_menu():
     menu = [ ]
-    add_dish = add_item_to_menu()
-    if add_dish:
-        menu.append(add_dish)
-        return menu
+    if item_to_add:
+        menu.append(item_to_add)
     print(menu)
     
 

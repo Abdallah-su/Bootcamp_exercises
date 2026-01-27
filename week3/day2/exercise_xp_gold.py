@@ -8,9 +8,9 @@ class  BankAccount():
     def authenticate(self, user_name, password):
         if self.user_name == user_name and self.password == password:
              self.authentication = True
-             return self.authentication
         else :
             self.authentication = False
+        return self.authentication    
 
      
     def deposit(self, amount, user_name, password):
@@ -35,10 +35,12 @@ class  BankAccount():
 
 
 class MinimumBalanceAccount(BankAccount):
-    def __init__(self, balance, minimum_balance = 0):
-        super().__init__(self, balance)
+    def __init__(self, balance, user_name, password, minimum_balance = 0):
+        super().__init__(balance, user_name, password)
         self.minimum_balance = minimum_balance
         
+    def __str__(self):
+        return f" Account User : {self.user_name}   | Account Balance: {self.balance}"
     
 
     def withdraw(self, amount):
@@ -101,7 +103,7 @@ class ATM():
             exit()
 my_account = BankAccount(200,"Abdallah", 1993, True)
 my_account.deposit(2000, "Abdallah",1993)
-my_account = MinimumBalanceAccount(200, 10)
+my_account = MinimumBalanceAccount(200, 10, 1993)
 print(my_account)
 #Accepts a username and a password.
 #Checks the username and the password against all accounts in account_list.
