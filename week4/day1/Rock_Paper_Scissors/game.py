@@ -5,13 +5,15 @@ class Game:
        pass
     def get_user_item(self):
         while True:
-            user_item = input("select from the options(R=rock/P=paper/S=scissors or Q to quit: ")
+            user_item = input("select from the options(R=rock/P=paper/S=scissors or Q to quit: ").upper()
             if user_item == "R":
                 return "Rock"
             elif user_item == "P":
                 return "Paper"
             elif user_item == "S":
                 return "Scissors"
+            elif user_item == "Q":
+                break
             else:
                 return ValueError("invalid input, choose from the options above")  
                      

@@ -6,26 +6,24 @@ def get_user_menu_choice():
     return user_choice
 
 
-def print_results(results): 
-    results  = { }
-    user_choice = my_game.get_user_item()
-    computer_choice = my_game.get_computer_item()
-    game_outcome = my_game.get_game_result(user_choice, computer_choice)
-    results[game_outcome] += 1
-    return results 
+def print_results(results):
+    for outcome, count in results.items():
+        print(f"{outcome} : {count}")
+
 
 
 def main():
     get_user_menu_choice()
-    game_outcome= { }
-    
+    game_outcome= {"win" : 0, "draw" : 0, "loss" : 0}
     while True:
-        if get_user_menu_choice() == "P":
-           my_game.play()
-           print(print_results(game_outcome))
-        elif get_user_menu_choice() == "N":
-            print(print_results(game_outcome))
-        elif get_user_menu_choice() == "Q":
+        choice = get_user_menu_choice().upper()
+        if choice == "P":
+           result = my_game.play()
+           game_outcome[result] +=1
+        elif choice == "N":
+            print_results(game_outcome)
+        elif choice== "Q":
+            print_results(game_outcome)
             print("goodbye")
             break
         else:

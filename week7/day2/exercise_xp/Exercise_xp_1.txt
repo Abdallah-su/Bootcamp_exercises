@@ -1,0 +1,23 @@
+                                         Exercise 1
+DATA ANALYSIS
+   Data analysis is a systematic way or process of transforming raw data to meaningful insights in order to inform decision making.it involves collecting, inspection , cleaning, transforming data, and interpretating results, making conclusions, recommendations to inform decision making.
+it deploy statistical tools and methods, and logical reasonings to describe, summarize and evaluate findings or information.
+ 
+Importance of Data Analysis
+There are numerous advantages or importance of data analysis and these include;
+1.Making informed decisions: Data analysis is data based process not intuition or gut-based process, results and recommendations are real-life based not imaginations.
+
+2.Managing risks: it minimizes potential losses as the results of taking certain decisions, because analysis tend to bring out the potential down and ups of making the decision.
+
+3.Cost management: it enable businesses to know where to invest more and where to cutdown cost based on the recommendations and conclusions
+
+4.Having the competitive edge: Companies leveraging on data analysis tend to outperform other competitors based on the potential of the sector, the opportunities and the likely challenges.
+
+Modern Application of Data Analysis
+There are numerous places or sectors currently where data analysis is applied. these include:
+Medical sector : finding out the root causes of certain sickness or diseases and the possible solutions. There were a lot of disease outbreaks which would have rendered most creatures especially human dead of infected but data analysis helped to reduce the potential harm and the lasting duration. Examples include swine-flu, bird-flu, Covid and the rest.
+Agriculture Sector: best tools, techniques and equipment and availability to famers. Data analysis has help in identifying the potential consumers of a particular produce, sourcing best seeds and fertilizers to boost production
+business: Businesses use Data analysis to source the best inputs are available and the potential market and categories and nature of market.
+
+
+ 
