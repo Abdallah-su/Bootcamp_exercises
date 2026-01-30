@@ -1,7 +1,10 @@
 class AnagramChecker:
     def __init__(self):
-        with open("sowpods.txt", "r" ) as f:
-            self.words =[line.strip() for line in f] 
+        try:
+            with open("sowpods.txt", "r" ) as f:
+               self.words =[line.strip() for line in f] 
+        except FileNotFoundError:
+                print("The file sowpods.txt was not found.")
 
     def is_valid_word(self, word):
         if word.upper() in self.words:
