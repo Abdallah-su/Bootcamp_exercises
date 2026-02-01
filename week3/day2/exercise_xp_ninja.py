@@ -40,16 +40,21 @@ class game_of_life:
 
 # the time jump
     def new_board(self):
-        new_grid = [[0 for _ in range(self.width)] for _ in range(self.height)]
-        self.__str__()
-        for r in range(self.height):
-            for c in range(self.width):
-                if self.grid[r][c] ==1 and 1 <self.count_live_neighbors(r, c) <=3 :
-                     new_grid[r][c] = 1
-                elif self.grid[r][c] == 0 and  self.count_live_neighbors(r,c) == 3:
-                    new_grid[r][c] = 1
-                else:new_grid[r][c] = 0
-        self.grid = new_grid
+        new_grid = [[0 for _ in range(self.width)] for _ in range(self.height)] 
+        for row in range(self.height):
+            for col in range(self.width):
+                live_neighbors = self.count_live_neighbors(row, col)
+                if self.grid[row][col] == 1:
+                    if live_neighbors < 2 or live_neighbors > 3:
+                        new_grid[row][col] = 0
+                    else:
+                        new_grid[row][col] = 1
+                else:
+                    if live_neighbors == 3:
+                        new_grid[row][col] = 1
+    # If no changes occurred, the board is stable and we stop.
+        if new_grid == self.grid:
+            return  
 import os
 import time
 my_game =game_of_life(10,10)  
