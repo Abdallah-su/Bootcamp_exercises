@@ -15,7 +15,7 @@ SELECT last_name, first_name FROM students WHERE last_name ='Benichou' OR first_
 SELECT last_name, first_name FROM students WHERE first_name ILIKE '%a%';
 SELECT last_name, first_name FROM students WHERE first_name ILIKE 'a%';
 SELECT last_name, first_name FROM students WHERE first_name ILIKE '%a';
-Select last_name, first_name from students where first_name ilike '_%a';
+Select last_name, first_name from students where first_name ilike '%a_';
 SELECT last_name, first_name FROM students WHERE student_id = 1 OR student_id = 3;
 SELECT * FROM students WHERE birth_date >= '2000-01-01';
 
