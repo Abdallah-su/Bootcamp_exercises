@@ -31,7 +31,7 @@ class MenuItem:
         return self.item
    
     def update(self, other_item,  other_price):
-        query = "update menu_item set item_name = %s, item_price = %s"
+        query = "update menu_item set item_name = %s, item_price = %s where item_name =%s and item_price= %s"
         cursor.execute(query,(self.item, other_item, other_price)) 
         connection.commit()
         
