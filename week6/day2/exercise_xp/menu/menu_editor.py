@@ -22,12 +22,11 @@ cursor = connection.cursor()
 from menu_item import  MenuItem
 from menu_manager import MenuManager
 def show_user_menu():
-    show_restaurant_menu()
     while True:
      user_order = input("""kindly select from the options;
-                        View an Item(V)
-                       Add an Item(A)
-                       Delete an item(D)
+                      View an Item(V)
+                      Add an Item(A)
+                      Delete an item(D)
                        update an item(U)
                        Show the Menu(S)
                         EXIT(E): """).upper()
@@ -55,43 +54,46 @@ def show_user_menu():
      else:print(" invalid input! try again")
 
 def add_item_to_menu():
-    global item_to_add
-    user_add = input ('select what to add: ').title()
-    user_price= input('select the price associated with the item added: ')
-    item_to_add = MenuItem(user_add, user_price)
-    if item_to_add:
-            return item_to_add
-    print(f"Your {item_to_add.item} is added ")
-    
-
+    user_item = input("Type in the item to add to the MENU: ").title()
+    user_price = input("Type in the price associated with the item: ")
+    item_to_add = MenuItem(user_item, user_price)
+    item_to_add.save()
+    return item_to_add
 
 def remove_item_from_menu():
-    user_delete = input('select what to delete: ').title()
-    item_to_delete =  MenuManager.get_by_name(user_delete)
-    if item_to_delete: 
-        item_to_delete.delete()
+    user_item = input("Type in the item to DELETE from the MENU: ").title()
+    item_to_delete = MenuManager.get_by_name(user_item)
+    if item_to_delete:
+        item_instance = MenuItem(item_to_delete[0], item_to_delete[1])
+        item_instance.delete()
+        print(f"{user_item} has been deleted from the menu")
+    else:
+        print(f"{user_item} not found in the menu")
+    
 
 def update_item_from_menu():
-     user_update_item = input("Type in the item to confirm your ORDER: ").title()
-     user_update = MenuManager.get_by_name(user_update_item)
-     user_update_price = input('type in the associated price: ' )
-     if user_update:
-            user_update.update(user_update_item, user_update_price)
-     print('Your order has been updated')
+    user_item = input("Type in the item to UPDATE from the MENU: ").title()
+    item_to_update = MenuManager.get_by_name(user_item)
+    if item_to_update:
+        item_instance = MenuItem(item_to_update[0], item_to_update[1])
+        new_item_name = input("Type in the NEW name for the item: ").title()
+        new_item_price = input("Type in the NEW price for the item: ")
+        item_instance.update(new_item_name, new_item_price)
+        print(f"{user_item} has been updated to {new_item_name} with price {new_item_price}")
+    else:
+        print(f"{user_item} not found in the menu")
 
 def show_menu():
-    menu = [ ]
-    if item_to_add:
-        menu.append(item_to_add)
-    print(menu)
+    show_restaurant_menu()
+
     
 
 def show_restaurant_menu():
-    print('\n---------RESTAURANT MENU--------')
-    menu = MenuManager.all()
-    for dish in menu:
-       print (f"\n {dish[0]}        |    {dish[1]}  ")
-    print('\n --------------------------')
+    items = MenuManager.all_items()
+    print("Restaurant Menu:")
+    for item in items:
+        print(f"Item: {item[0]}, Price: {item[1]}")
+
 
 if __name__ == "__main__":
      show_user_menu()
