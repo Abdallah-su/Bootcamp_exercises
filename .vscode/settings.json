@@ -1,4 +1,5 @@
 {
     "editor.suggest.showSnippets": false,
-    "editor.snippets.codeActions.enabled": false
+    "editor.snippets.codeActions.enabled": false,
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
