@@ -12,6 +12,8 @@ class circle:
       self.radius = radius
    def __str__(self):
       return f"Circle with radius: {self.radius}"
+   def __repr__(self):
+      return f'circle ({self.radius})'
    def __add__(self, other):
       if isinstance(other, circle):
          return circle(self.radius + other.radius)
@@ -20,7 +22,7 @@ class circle:
    
    def  __gt__(self, other):
       if isinstance(other, circle):
-         return self.radius > other.radius
+          return self.radius > other.radius
    def __lt__(self, other):
       if isinstance(other, circle):
          return self.radius < other.radius
@@ -33,3 +35,6 @@ circle3 = circle(7)
 print(circle1)    
 print(circle1.area())
 print(circle1.__gt__(circle2))
+circle_list =[circle1, circle2, circle3]
+circle_list.sort()
+print(circle_list)
