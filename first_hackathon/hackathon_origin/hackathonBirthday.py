@@ -20,10 +20,10 @@ database = 'dvdrental'
 cursor = connection.cursor()
 def birthday_wish(customer, customer_email):
     msg = EmailMessage()
-    msg['subject'] = "Happy Birth from Nje firm"
+    msg['subject'] = "Happy Birthday from Nje firm"
     msg['from'] = my_email
     msg['to'] = customer_email
-    msg.set_content(f"hey {customer} Wishing you a happy and a blessed birthday, Enjoy your day. we appreciate you being part of our success stories over the years")
+    msg.set_content(f"hey {customer} Wishing you happy and a blessed birthday, Enjoy your day. we appreciate you being part of our success stories over the years")
 
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
