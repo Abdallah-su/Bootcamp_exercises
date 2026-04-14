@@ -9,11 +9,19 @@
 
 
 import psycopg2
+from dotenv import load_dotenv
+import os
+load_dotenv()
+my_email = os.getenv('EMAIL_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+app_password =os.getenv('EMAIL_PASS')
+
 connection = psycopg2.connect(
 user = 'postgres',
-password = 'Abs0240574227',
+password = DB_PASSWORD,
 host = 'localhost',
 port = '5432',
+
 database = 'menu'
 )
 
