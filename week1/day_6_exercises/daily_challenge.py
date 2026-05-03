@@ -22,9 +22,13 @@ def affordable_items(items_purchase, wallet):
    wallet_amount = int(wallet.replace("$", "").replace(",", ""))
    for item, price in items_purchase.items():
       price_amount = int(price.replace("$", "").replace(",", ""))
-      if price_amount <= wallet_amount:
+      if price_amount < wallet_amount:
         affordable_items.append(item)
-   print("With", wallet, "you can afford:", affordable_items)
+        wallet_amount -= price_amount
+   if not affordable_items:
+        print("Nothing")
+   else:
+         print("With", wallet, "you can afford:", ", ".join(sorted(affordable_items)))
 
 affordable_items(items_purchase1, wallet1)
 affordable_items(items_purchase2, wallet2)  
