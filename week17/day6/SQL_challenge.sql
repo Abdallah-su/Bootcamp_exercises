@@ -41,12 +41,13 @@ SELECT SUM(hire_date IS NULL) AS date_nulls from employees;
 SELECT *, COUNT(*) FROM employees GROUP by employee_id having COUNT(*) >1;
 
 --Correct any structural issues, such as inconsistent naming conventions or formatting errors.
-update employees set employee_name = UPPER(SUBSTR(1,1, employee_name))||SUBSTR(2, employee_name), hire_date = DATE(hire_date);
+update employees set employee_name = UPPER(SUBSTR(employee_name,1,1))||SUBSTR( employee_name,2);
+ALTER TABLE employees ALTER COLUMN hire_date DATE;
 
 --Detect and address any outliers that may skew the analysis.
 SELEct MAX(salary),MIN(salary),AVG(salary) FROM employees;
 SELECT *, NTILE(4) OVER (PARTITION BY department ORDER BY Salary) AS quantiles From employees;
-
+UPDATE employees set salary =90000 WHERE salary >90000;
 --Standardize and normalize data where applicable to ensure consistency
 SELECT DISTINCT department FROM employees
 
