@@ -17,21 +17,21 @@ import math
 # Calculate total number of pages using math.ceil.
  
 
-class paginamtion:
-    def __init__(self, page_size = 10, items = [ ]):
-        self.items = items
-        self.page_size =int(page_size) 
+class Pagination:
+    def __init__(self, page_size = 10, items = None):
+        self.items = items if items is not None else []
+        self.page_size = int(page_size)
         self.current_idx = 0
-        self.total_pages = math.cell(len(self.items)/ self.total_pages)
+        self.total_pages = math.ceil(len(self.items) / self.page_size)
 # Step 3: Implement the get_visible_items() Method
 
 # This method returns the list of items visible on the current page.
 # Use slicing based on the current_idx and page_size.
       
     def  get_visible_items(self):
-        start_idx = self.current_idx * self.page_size
-        end_idx = start_idx + self.page_size
-        return self.items[start_idx:end_idx]
+        start = self.current_idx * self.page_size
+        end = start + self.page_size
+        return self.items[start:end]
 #   Step 4: Implement Navigation Methods
 # These methods should help navigate through pages:
 # go_to_page(page_num)
@@ -73,28 +73,28 @@ class paginamtion:
             self.items.append(item)
             self.total_pages = math.ceil(len(self.items) / self.page_size)
             return self.items
-def remove_item(self, item):
+    def remove_item(self, item):
             if item in self.items:
                 self.items.remove(item)
                 self.total_pages = math.ceil(len(self.items) / self.page_size)
             return self.items
-def clear_items(self):
+    def clear_items(self):
             self.items = []
             self.current_idx = 0
             self.total_pages = 0
             return self.items
-def get_all_items(self):
+    def get_all_items(self):
             return self.items
-def set_page_size(self, page_size):
+    def set_page_size(self, page_size):
             self.page_size = int(page_size)
             self.total_pages = math.ceil(len(self.items) / self.page_size)
             self.current_idx = 0
             return self.page_size
-def get_page_size(self):
+    def get_page_size(self):
             return self.page_size
-def is_first_page(self):
+    def is_first_page(self):
             return self.current_idx == 0
-def is_last_page(self):
+    def is_last_page(self):
             return self.current_idx == self.total_pages - 1                
     
     
